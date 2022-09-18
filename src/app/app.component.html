@@ -1,9 +1,64 @@
-<div class="search">
-    <form #form="ngForm" (submit)="onSubmit()">
-        <input type="text" placeholder="Search city" name="city" [(ngmodel)]="cityName">
-    </form>
-</div>
 <div class="container" *ngif="weatherData">
+    <div class="upper-data">
+        <img src="../assets/hot.png" *ngif="weatherData.main.temp > 12">
+        <img src="../assets/cold.png" *ngif="weatherData.main.temp <= 12">
+    
+        <div class="weather-data">
+        <div class="location">Edmonton</div>
+        <div class="temperature">35°C</div>
+        </div>
+    </div>
+    
+    <div class="lower-data">
+        <div class="more-info-label">
+        More Information
+        </div>
+        <div class="more-info-container">
+        <div class="info-block">
+            <div class="info-block-label">
+            <img src="../assets/min.png">
+            <span>min</span>
+            </div>
+            <div class="info-block-value">
+            0°C
+            </div>
+        </div>
+    
+        <div class="info-block">
+            <div class="info-block-label">
+            <img src="../assets/max.png">
+            <span>max</span>
+            </div>
+            <div class="info-block-value">
+            40°C
+            </div>
+        </div>
+    
+        <div class="info-block">
+            <div class="info-block-label">
+            <img src="../assets/humidity.png">
+            <span>humidity</span>
+            </div>
+            <div class="info-block-value">
+            99%
+            </div>
+        </div>
+    
+        <div class="info-block">
+            <div class="info-block-label">
+            <img src="../assets/wind.png">
+            <span>wind</span>
+            </div>
+            <div class="info-block-value">
+            99 km/h
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
     <div class="upper-data">
         <img src="../assets/hot.png" *ngif="weatherData.main.temp > 12">
         <img src="../assets/cold.png" *ngif="weatherData.main.temp <= 12">
