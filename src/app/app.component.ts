@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   }
   cityName: string = 'Edmonton';
-  weatherData?: WeatherData;
+  weatherData!: WeatherData;
 
   ngOnInit(): void {
     this.weatherService.getWeatherData('Edmonton').subscribe({

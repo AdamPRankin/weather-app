@@ -1,11 +1,14 @@
+
+
+
 <div class="container" *ngif="weatherData">
     <div class="upper-data">
         <img src="../assets/hot.png" *ngif="weatherData.main.temp > 12">
         <img src="../assets/cold.png" *ngif="weatherData.main.temp <= 12">
     
         <div class="weather-data">
-        <div class="location">Edmonton</div>
-        <div class="temperature">35°C</div>
+        <div class="location">{{weatherData.name}}</div>
+        <div class="temperature">{{weatherData.main.temp}}</div>
         </div>
     </div>
     
@@ -20,7 +23,7 @@
             <span>min</span>
             </div>
             <div class="info-block-value">
-            0°C
+            {{weatherData.main.temp_min}}
             </div>
         </div>
     
@@ -30,7 +33,7 @@
             <span>max</span>
             </div>
             <div class="info-block-value">
-            40°C
+            {{weatherData.main.temp_max}}
             </div>
         </div>
     
@@ -40,7 +43,7 @@
             <span>humidity</span>
             </div>
             <div class="info-block-value">
-            99%
+            {{weatherData.main.humidity}}
             </div>
         </div>
     
@@ -50,7 +53,7 @@
             <span>wind</span>
             </div>
             <div class="info-block-value">
-            99 km/h
+            {{weatherData.wind.speed}}
             </div>
         </div>
         </div>
@@ -65,7 +68,7 @@
     
         <div class="weather-data">
         <div class="location">Edmonton</div>
-        <div class="temperature">35°C</div>
+        <div class="temperature">15°C</div>
         </div>
     </div>
     
@@ -80,7 +83,7 @@
             <span>min</span>
             </div>
             <div class="info-block-value">
-            0°C
+            1°C
             </div>
         </div>
     
@@ -90,7 +93,7 @@
             <span>max</span>
             </div>
             <div class="info-block-value">
-            40°C
+            16°C
             </div>
         </div>
     
@@ -100,7 +103,7 @@
             <span>humidity</span>
             </div>
             <div class="info-block-value">
-            99%
+            19%
             </div>
         </div>
     
@@ -110,7 +113,7 @@
             <span>wind</span>
             </div>
             <div class="info-block-value">
-            99 km/h
+            9 km/h
             </div>
         </div>
         </div>
